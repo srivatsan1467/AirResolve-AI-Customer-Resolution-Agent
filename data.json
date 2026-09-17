@@ -1,0 +1,108 @@
+{
+  "exercise_date": "2026-09-23",
+  "customers": {
+    "Priya Nair": {
+      "loyalty_tier": "Gold",
+      "booking_reference": "SK4821X",
+      "contact": {
+        "email": "priya.nair@example.com",
+        "phone": "+91-98xxxxxxx1"
+      },
+      "travel_history": {
+        "flights_last_12_months": 6,
+        "prior_complaints": 1,
+        "complaint_details": "Delayed baggage, resolved with voucher"
+      },
+      "bookings": [
+        {
+          "flight": "SK-204",
+          "route": "Delhi → Goa",
+          "date": "2026-09-23",
+          "scheduled_departure": "18:40",
+          "status": "Cancelled",
+          "status_detail": "Operational reasons"
+        },
+        {
+          "flight": "Return flight",
+          "route": "Goa → Delhi",
+          "date": "2026-09-25",
+          "scheduled_departure": "16:20",
+          "status": "Unaffected"
+        }
+      ]
+    },
+    "Arvind Kulkarni": {
+      "loyalty_tier": "Silver",
+      "booking_reference": "TR1190B",
+      "contact": {
+        "email": "arvind.kulkarni@example.com",
+        "phone": "+91-98xxxxxxx2"
+      },
+      "travel_history": {
+        "flights_last_12_months": 3,
+        "prior_complaints": 0,
+        "complaint_details": null
+      },
+      "bookings": [
+        {
+          "flight": "SK-118",
+          "route": "Mumbai → Bengaluru",
+          "date": "2026-09-23",
+          "scheduled_departure": "07:10",
+          "status": "Delayed",
+          "delay_hours": 4,
+          "new_departure": "11:10"
+        }
+      ]
+    },
+    "Meher Kaur": {
+      "loyalty_tier": "Platinum",
+      "booking_reference": "WL7742",
+      "contact": {
+        "email": "meher.kaur@example.com",
+        "phone": "+91-98xxxxxxx3"
+      },
+      "travel_history": {
+        "flights_last_12_months": 10,
+        "prior_complaints": 1,
+        "complaint_details": "Overbooking, resolved with a tier-status upgrade"
+      },
+      "bookings": [
+        {
+          "flight": "SK-305",
+          "route": "Delhi → Hyderabad",
+          "date": "2026-09-23",
+          "scheduled_departure": "14:00",
+          "status": "Delayed",
+          "delay_hours": 6,
+          "new_departure": "20:00"
+        }
+      ]
+    }
+  },
+  "rules": {
+    "cancellation_rebooking": "If a flight is cancelled by the airline, the customer is entitled to a free rebooking on the next available flight within 24 hours, or a full refund, customer's choice.",
+    "delay_under_3_hours": "₹500 meal voucher",
+    "delay_more_than_3_hours": "Meal voucher + lounge access",
+    "delay_more_than_5_hours": "Meal voucher + hotel accommodation, covering only the delayed hours (not a full night's stay)",
+    "refund_processing": "Full refund within 7 business days to the original payment method only.",
+    "fare_difference": "If a customer voluntarily chooses to rebook on a higher-fare flight, they must pay the fare difference. Agents cannot waive fare differences above ₹1,500 without supervisor approval.",
+    "loyalty": "Gold and Platinum customers get priority rebooking but no additional compensation beyond standard policy."
+  },
+  "agent_authority": {
+    "allowed": [
+      "Rebook on next available flight within 24 hours at no charge for airline-caused cancellation",
+      "Issue meal vouchers and lounge access according to delay policy",
+      "Arrange hotel accommodation for the delayed-hours portion when eligible",
+      "Initiate refund request for airline-caused cancellation",
+      "Provide customer's own booking and flight status information"
+    ],
+    "escalate": [
+      "Compensation beyond stated policy amounts",
+      "Waiving fare difference above ₹1,500",
+      "Exceptions for non-airline-caused disruptions",
+      "Threats of legal action or formal complaints",
+      "Refund to a different payment method"
+    ]
+  }
+}
