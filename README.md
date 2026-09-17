@@ -1,4 +1,4 @@
-# AirResolve — Customer-Facing Airline Disruption Resolution Agent
+# AirResolve: Customer-Facing Airline Disruption Resolution Agent
 
 A recruiter-friendly Python + Streamlit prototype for AIONOS Assignment 3.
 
